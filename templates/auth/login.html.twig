@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ include('header.html.twig') }}
+    </head>
+    <body>
+        <div class="container">
+            {{ include('top_bar.html.twig') }}
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {% if errors %}
+                        {% for error in errors %}
+                            <div class="alert alert-danger">{{ error }}</div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {% if notices %}
+                        {% for notice in notices %}
+                            <div class="alert alert-info">{{ notice }}</div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <form class="row" method="post" action="">
+                <div class="col-md-5">
+                    <input class="form form-control" type="text" name="login" placeholder="Type in login..." />
+                </div>
+                <div class="col-md-5">
+                    <input class="form form-control" type="password" name="password" placeholder="Type in password..." />
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary" type="submit">Log in</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

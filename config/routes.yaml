@@ -1,3 +1,40 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+auth_login:
+    path: /login
+    controller: App\Controller\AuthController::login
+
+auth_logout:
+    path: /logout
+    controller: App\Controller\AuthController::logout
+
+auth_register:
+    path: /register
+    controller: App\Controller\AuthController::register
+
+api_auth:
+    path: /api/auth
+    controller: App\Controller\UserRestController::auth
+    methods: POST
+
+api_user_create:
+    path: /api/user
+    controller: App\Controller\UserRestController::createUser
+    methods: POST
+
+api_user_read:
+    path: /api/user/{id}
+    controller: App\Controller\UserRestController::readUser
+    methods: GET
+
+api_user_update:
+    path: /api/user/{id}
+    controller: App\Controller\UserRestController::updateUser
+    methods: PUT
+
+api_user_delete:
+    path: /api/user/{id}
+    controller: App\Controller\UserRestController::deleteUser
+    methods: DELETE
