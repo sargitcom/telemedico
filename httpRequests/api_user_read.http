@@ -1,0 +1,7 @@
+GET http://telemedico.loc/api/user/6
+Content-Type: application/json
+
+{}
+
+###
+

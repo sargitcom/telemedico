@@ -1,0 +1,10 @@
+POST http://telemedico.loc/api/user
+Content-Type: application/json
+
+{
+  "login": "testowanie2",
+  "password" : "testowaniehasla"
+}
+
+###
+

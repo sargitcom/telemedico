@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {{ include('header.html.twig') }}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container">
+            {{ include('top_bar.html.twig', {is_logged_in: is_logged_in}) }}
+        </div>
     </body>
 </html>

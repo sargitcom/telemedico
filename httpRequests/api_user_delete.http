@@ -1,0 +1,7 @@
+DELETE http://telemedico.loc/api/user/8
+Content-Type: application/json
+
+{}
+
+###
+
